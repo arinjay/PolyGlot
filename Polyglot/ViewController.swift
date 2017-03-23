@@ -71,8 +71,16 @@ class ViewController: UITableViewController {
     }
 }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        savewords()
+    }
     
-    
+    func savewords(){
+        if let defaults = UserDefaults(suiteName: "group.com.Arinjay.Polyglot")
+        {
+            defaults.set(words, forKey: "Words")
+        }
+    }
     
     
 
