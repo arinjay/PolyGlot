@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7164D781E856F6000493C30 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7164D771E856F6000493C30 /* NotificationCenter.framework */; };
+		C7164D7B1E856F6000493C30 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7164D7A1E856F6000493C30 /* TodayViewController.swift */; };
+		C7164D7E1E856F6000493C30 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7164D7C1E856F6000493C30 /* MainInterface.storyboard */; };
+		C7164D821E856F6000493C30 /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C7164D751E856F6000493C30 /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C7D1E50F1E7ED2500032D8F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1E50E1E7ED2500032D8F9 /* AppDelegate.swift */; };
 		C7D1E5111E7ED2500032D8F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1E5101E7ED2500032D8F9 /* ViewController.swift */; };
 		C7D1E5141E7ED2500032D8F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D1E5121E7ED2500032D8F9 /* Main.storyboard */; };
@@ -14,7 +18,36 @@
 		C7D1E5191E7ED2500032D8F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7D1E5171E7ED2500032D8F9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C7164D801E856F6000493C30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7D1E5031E7ED24F0032D8F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7164D741E856F6000493C30;
+			remoteInfo = Widget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C7164D861E856F6000493C30 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C7164D821E856F6000493C30 /* Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C7164D751E856F6000493C30 /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7164D771E856F6000493C30 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		C7164D7A1E856F6000493C30 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		C7164D7D1E856F6000493C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C7164D7F1E856F6000493C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7D1E50B1E7ED2500032D8F9 /* Polyglot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polyglot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D1E50E1E7ED2500032D8F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7D1E5101E7ED2500032D8F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +58,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C7164D721E856F6000493C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7164D781E856F6000493C30 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7D1E5081E7ED24F0032D8F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +76,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7164D761E856F6000493C30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7164D771E856F6000493C30 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7164D791E856F6000493C30 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				C7164D7A1E856F6000493C30 /* TodayViewController.swift */,
+				C7164D7C1E856F6000493C30 /* MainInterface.storyboard */,
+				C7164D7F1E856F6000493C30 /* Info.plist */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
 		C7D1E5021E7ED24F0032D8F9 = {
 			isa = PBXGroup;
 			children = (
 				C7D1E50D1E7ED2500032D8F9 /* Polyglot */,
+				C7164D791E856F6000493C30 /* Widget */,
+				C7164D761E856F6000493C30 /* Frameworks */,
 				C7D1E50C1E7ED2500032D8F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D1E50B1E7ED2500032D8F9 /* Polyglot.app */,
+				C7164D751E856F6000493C30 /* Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +129,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C7164D741E856F6000493C30 /* Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7164D851E856F6000493C30 /* Build configuration list for PBXNativeTarget "Widget" */;
+			buildPhases = (
+				C7164D711E856F6000493C30 /* Sources */,
+				C7164D721E856F6000493C30 /* Frameworks */,
+				C7164D731E856F6000493C30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Widget;
+			productName = Widget;
+			productReference = C7164D751E856F6000493C30 /* Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C7D1E50A1E7ED24F0032D8F9 /* Polyglot */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7D1E51D1E7ED2500032D8F9 /* Build configuration list for PBXNativeTarget "Polyglot" */;
@@ -74,10 +153,12 @@
 				C7D1E5071E7ED24F0032D8F9 /* Sources */,
 				C7D1E5081E7ED24F0032D8F9 /* Frameworks */,
 				C7D1E5091E7ED24F0032D8F9 /* Resources */,
+				C7164D861E856F6000493C30 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C7164D811E856F6000493C30 /* PBXTargetDependency */,
 			);
 			name = Polyglot;
 			productName = Polyglot;
@@ -94,6 +175,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Arinjay Sharma";
 				TargetAttributes = {
+					C7164D741E856F6000493C30 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
 					C7D1E50A1E7ED24F0032D8F9 = {
 						CreatedOnToolsVersion = 8.2;
 						ProvisioningStyle = Automatic;
@@ -114,11 +199,20 @@
 			projectRoot = "";
 			targets = (
 				C7D1E50A1E7ED24F0032D8F9 /* Polyglot */,
+				C7164D741E856F6000493C30 /* Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C7164D731E856F6000493C30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7164D7E1E856F6000493C30 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7D1E5091E7ED24F0032D8F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +226,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C7164D711E856F6000493C30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7164D7B1E856F6000493C30 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7D1E5071E7ED24F0032D8F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,7 +245,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C7164D811E856F6000493C30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7164D741E856F6000493C30 /* Widget */;
+			targetProxy = C7164D801E856F6000493C30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C7164D7C1E856F6000493C30 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7164D7D1E856F6000493C30 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		C7D1E5121E7ED2500032D8F9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -163,6 +281,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C7164D831E856F6000493C30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Polyglot.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C7164D841E856F6000493C30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Widget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Polyglot.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		C7D1E51B1E7ED2500032D8F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -257,6 +399,7 @@
 		C7D1E51E1E7ED2500032D8F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Polyglot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -269,6 +412,7 @@
 		C7D1E51F1E7ED2500032D8F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Polyglot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -281,6 +425,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C7164D851E856F6000493C30 /* Build configuration list for PBXNativeTarget "Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7164D831E856F6000493C30 /* Debug */,
+				C7164D841E856F6000493C30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C7D1E5061E7ED24F0032D8F9 /* Build configuration list for PBXProject "Polyglot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -297,6 +449,7 @@
 				C7D1E51F1E7ED2500032D8F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
