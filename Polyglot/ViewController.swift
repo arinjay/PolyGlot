@@ -15,6 +15,8 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewWord))
        
         if let defaults = UserDefaults(suiteName: "group.com.Arinjay.Polyglot"){
             
@@ -72,6 +74,10 @@ class ViewController: UITableViewController {
 }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        words.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        
         savewords()
     }
     
@@ -81,6 +87,59 @@ class ViewController: UITableViewController {
             defaults.set(words, forKey: "Words")
         }
     }
+    
+    
+    func addNewWord(){
+        
+        let ac = UIAlertController(title: "Add you word", message: nil, preferredStyle: .alert)
+        
+        ac.addTextField { (textField) in
+            textField.placeholder = "English"
+        }
+        
+        ac.addTextField { (textField) in
+            textField.placeholder = "German"
+        }
+        
+        
+        let submitAction = UIAlertAction(title: "Add", style: .default) { [unowned self,ac]
+            (action:UIAlertAction!) in
+            
+            
+//            let firstWord = ac.textFields?.[0].text ??; ""
+//            let secondWord = ac.textFields?.[1].text ?? " "
+              let firstWord = ac.textFields?[0].text ?? ""
+              let socondWord = ac.textFields?[1].text ?? ""
+            
+            self.insertFlashCard(first: firstWord, second: socondWord)
+        }
+        
+        ac.addAction(submitAction)
+        ac.addAction(UIAlertAction(title: "hey", style: .cancel))
+        
+        present(ac, animated: true)
+    }
+    
+    
+    func insertFlashCard(first: String, second: String){
+        
+        //check for empty string
+        guard first.characters.count > 0 && second.characters.count > 0  else {return}
+        
+        //new indexpath will be +1
+        let newIndexPath = IndexPath(row: words.count, section:0)
+        
+        words.append("\(first)::\(second)")
+        
+        //adding to tableview
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+        
+        savewords()
+    }
+    
+    
+    
+    
     
     
 
