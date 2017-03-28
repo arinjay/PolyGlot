@@ -16,25 +16,35 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(startTest))
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "End Test", style: .plain, target: nil, action: nil)
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewWord))
-       
-        if let defaults = UserDefaults(suiteName: "group.com.Arinjay.Polyglot"){
+        
+        let titleAttributes = [NSFontAttributeName: UIFont(name: "AmericanTypewriter", size: 22)!]
+        navigationController?.navigationBar.titleTextAttributes = titleAttributes
+        title = "POLYGLOT"
+        
+        if let defaults = UserDefaults(suiteName: "group.com.NamasteApps.Polyglot") {
             
-            if let saveWords = defaults.object(forKey: "words") as? [String]{
-                words = saveWords
-            }
-            else{
-              saveInitialWords(to: defaults)
+            if let savedWords = defaults.object(forKey: "Words") as? [String] {
+                words = savedWords
+                
+            } else {
+                saveInitialWords(to: defaults)
             }
         }
     }
     
-    func saveInitialWords(to default: UserDefaults){
+    func saveInitialWords(to defaults: UserDefaults){
         words.append("Hi::Hallo")
         words.append("Time::Zeit")
         words.append("Chicken::Hähnchen")
         words.append("Sir::Herr")
         words.append("Brother::Bruder")
+        
+        defaults.set(words, forKey: "Words") //this line was missing so i added it
         
     }
     
@@ -48,30 +58,35 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Word", for: indexPath)
         let word = words[indexPath.row]
         let split = word.components(separatedBy: "::")
+        
         cell.textLabel?.text = split[0]
         
         cell.detailTextLabel?.text = ""
-
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-       tableView.deselectRow(at: indexPath, animated: true)
-    
-        if let cell = tableView.cellForRow(at: indexPath){
-            if cell.detailTextLabel?.text == ""{
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let cell = tableView.cellForRow(at: indexPath) {
+            
+            if cell.detailTextLabel?.text == "" {
                 let word = words[indexPath.row]
                 let split = word.components(separatedBy: "::")
+                
                 cell.detailTextLabel?.text = split[1]
-            }else{
+                
+            } else {
                 cell.detailTextLabel?.text = ""
             }
+        }
     }
-}
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
@@ -83,6 +98,7 @@ class ViewController: UITableViewController {
     
     func savewords(){
         if let defaults = UserDefaults(suiteName: "group.com.Arinjay.Polyglot")
+        
         {
             defaults.set(words, forKey: "Words")
         }

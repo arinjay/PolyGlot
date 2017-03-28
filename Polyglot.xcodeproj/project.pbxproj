@@ -48,6 +48,8 @@
 		C7164D7A1E856F6000493C30 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		C7164D7D1E856F6000493C30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		C7164D7F1E856F6000493C30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7164D971E85838F00493C30 /* Polyglot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Polyglot.entitlements; sourceTree = "<group>"; };
+		C7164D981E85839800493C30 /* Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Widget.entitlements; sourceTree = "<group>"; };
 		C7D1E50B1E7ED2500032D8F9 /* Polyglot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Polyglot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D1E50E1E7ED2500032D8F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7D1E5101E7ED2500032D8F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		C7164D791E856F6000493C30 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				C7164D981E85839800493C30 /* Widget.entitlements */,
 				C7164D7A1E856F6000493C30 /* TodayViewController.swift */,
 				C7164D7C1E856F6000493C30 /* MainInterface.storyboard */,
 				C7164D7F1E856F6000493C30 /* Info.plist */,
@@ -116,6 +119,7 @@
 		C7D1E50D1E7ED2500032D8F9 /* Polyglot */ = {
 			isa = PBXGroup;
 			children = (
+				C7164D971E85838F00493C30 /* Polyglot.entitlements */,
 				C7D1E50E1E7ED2500032D8F9 /* AppDelegate.swift */,
 				C7D1E5101E7ED2500032D8F9 /* ViewController.swift */,
 				C7D1E5121E7ED2500032D8F9 /* Main.storyboard */,
@@ -177,11 +181,23 @@
 				TargetAttributes = {
 					C7164D741E856F6000493C30 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = QSHU6W7M8B;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					C7D1E50A1E7ED24F0032D8F9 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = QSHU6W7M8B;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -284,6 +300,8 @@
 		C7164D831E856F6000493C30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				DEVELOPMENT_TEAM = QSHU6W7M8B;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Polyglot.Widget;
@@ -296,6 +314,8 @@
 		C7164D841E856F6000493C30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Widget/Widget.entitlements;
+				DEVELOPMENT_TEAM = QSHU6W7M8B;
 				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Polyglot.Widget;
@@ -401,6 +421,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Polyglot/Polyglot.entitlements;
+				DEVELOPMENT_TEAM = QSHU6W7M8B;
 				INFOPLIST_FILE = Polyglot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Polyglot;
@@ -414,6 +436,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Polyglot/Polyglot.entitlements;
+				DEVELOPMENT_TEAM = QSHU6W7M8B;
 				INFOPLIST_FILE = Polyglot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Polyglot;
@@ -432,6 +456,7 @@
 				C7164D841E856F6000493C30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C7D1E5061E7ED24F0032D8F9 /* Build configuration list for PBXProject "Polyglot" */ = {
 			isa = XCConfigurationList;
