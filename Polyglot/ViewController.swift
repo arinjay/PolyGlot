@@ -16,6 +16,9 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(StartTest))
+        
+        
         //navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(startTest))
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "End Test", style: .plain, target: nil, action: nil)
@@ -153,7 +156,15 @@ class ViewController: UITableViewController {
         savewords()
     }
     
+    func StartTest(){
     
+        guard let vc = storyboard?.instantiateInitialViewController(withIdentifier:"Test") as?
+            TestViewController else{return}
+        
+        vc.words = words
+        navigationController?.pushViewController(vc, animated: true)
+    
+    }
     
     
     

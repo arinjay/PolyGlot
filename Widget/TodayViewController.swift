@@ -17,7 +17,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         if let defaults = UserDefaults(suiteName: "group.com.Arinjay.Polyglot"){
             
             if let saveWords = defaults.object(forKey: "words") as? [String]{
@@ -49,6 +49,10 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         
         cell.detailTextLabel?.text = ""
         
+        cell.selectedBackgroundView = UIView()
+        cell.selectedBackgroundView?.backgroundColor = UIColor(white: 1, alpha: 0.2)
+        
+        
         return cell
     }
     
@@ -69,7 +73,14 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
 
     
     
-    
+    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
+        if activeDisplayMode == .compact{
+            preferredContentSize = CGSize(width: 0, height: 110)
+        }
+        else{
+            preferredContentSize  = CGSize(width: 0, height: 440)
+        }
+    }
     
     
     

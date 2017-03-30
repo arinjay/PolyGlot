@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8ye-Ih-gYa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8ye-Ih-gYa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,6 +53,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bi9-Wb-Hp4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2092" y="67.916041979010501"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="hvq-mx-vkN">
+            <objects>
+                <viewController storyboardIdentifier="Test" id="2rp-rB-17u" customClass="TestViewController" customModule="Polyglot" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fq8-kk-ZgW"/>
+                        <viewControllerLayoutGuide type="bottom" id="5IF-7L-53P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rdW-4A-hgu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ygQ-Pz-0ef">
+                                <rect key="frame" x="52" y="288.5" width="270" height="91"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you say that in German" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbQ-Hh-Pwp">
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="21"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bruder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6R-ht-Ecb">
+                                        <rect key="frame" x="0.0" y="61" width="270" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ygQ-Pz-0ef" firstAttribute="centerX" secondItem="rdW-4A-hgu" secondAttribute="centerX" id="JRl-eB-AzE"/>
+                            <constraint firstItem="ygQ-Pz-0ef" firstAttribute="centerY" secondItem="rdW-4A-hgu" secondAttribute="centerY" id="Qlv-iM-5oy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="prompt" destination="V6R-ht-Ecb" id="ru8-ro-HZL"/>
+                        <outlet property="stackViews" destination="ygQ-Pz-0ef" id="pbD-S6-PdV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1h-i3-j1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2904.8000000000002" y="67.916041979010501"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xbg-Xp-wqW">
